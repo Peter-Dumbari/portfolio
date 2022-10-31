@@ -1,0 +1,41 @@
+nav{
+    padding: 2rem !important;
+    font-size: larger;
+    font-weight: 500;
+
+    .navbar-brand img{
+        width: 70px;
+        animation: App-logo-spin infinite 20s linear;
+    }
+
+    .nav-item{
+        margin: 0 10px 0 10px !important;
+       
+        .nav-link{
+            color:  rgb(194, 200, 207) !important;
+        }
+    }
+}
+
+.centeritems{
+    align-self: center !important;
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+
+
+.active{
+    color: #4590f6 !important;
+    border-bottom: solid 1px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

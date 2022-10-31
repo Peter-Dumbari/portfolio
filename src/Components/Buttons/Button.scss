@@ -1,0 +1,28 @@
+.butt {
+  border-radius: 10px;
+  width: 180px !important;
+  padding: 15px;
+  border: none;
+  font-weight: 400;
+  font-size: large;
+}
+
+.butt:hover {
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+
+.blue {
+  background-color: #4590f6 !important;
+  color: rgba(253, 249, 249, 0.856);
+  box-shadow: 5px 5px 0px 1px rgba(219, 228, 240, 1);
+  -webkit-box-shadow: 5px 5px 0px 1px rgba(219, 228, 240, 1);
+  -moz-box-shadow: 5px 5px 0px 1px rgba(219, 228, 240, 1);
+  transition: 0.3s;
+}
+
+.none{
+    background-color: #4590f6 !important;
+   color: rgba(253, 249, 249, 0.856);
+}
