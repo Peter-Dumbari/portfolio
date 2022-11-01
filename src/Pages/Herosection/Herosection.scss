@@ -1,3 +1,39 @@
 .hero_container{
     padding: 3rem;
+    background: url("../../Images/hero_background.svg") top right no-repeat;
+    background-size: 65%;
+    height: 90vh;
+
+    .first_text{
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    .second_text{
+        font-size: 5vw;
+        font-weight: bold;
+    }
+
+    .third_text{
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .listing{
+        justify-content:space-between;
+        width: 80%;
+    }
+
+    .listing span{
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+
+    .briefing{
+        margin-top: 2rem;
+    }
+
+}
+
+.fa-earth-americas{
+    margin-left: 6px;
 }
