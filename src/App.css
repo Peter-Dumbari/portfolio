@@ -1,7 +1,7 @@
 *{
   font-family: 'SourceSerifPro-Regular';
+  cursor: grabbing;
 }
-
 @font-face {
   font-family: SourceSerifPro-Regular;
   src: local("SourceSerifPro-Regular.ttf"),
