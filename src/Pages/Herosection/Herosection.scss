@@ -1,8 +1,7 @@
 .hero_container{
     padding: 3rem;
-    background: url("../../Images/hero_background.svg") top right no-repeat;
+    // background: url("../../Images/hero_background.svg") top right no-repeat;
     background-size: 65%;
-    height: 90vh;
 
     .first_text{
         font-weight: bold;
@@ -37,3 +36,7 @@
 .fa-earth-americas{
     margin-left: 6px;
 }
+
+.animate__animated.animate__zoomIn {
+    --animate-duration: 4s;
+  }

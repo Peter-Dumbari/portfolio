@@ -46,7 +46,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <Buttons title={"GET YOUR STANDARD WEBSITE"} styLe={'blue'} logo={<i className="fa-solid fa-earth-americas"></i>}/>
+      <Buttons title={"VIEW MORE PROJECTS"} styLe={'blue'} logo={<i className="fa-solid fa-earth-americas"></i>}/>
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from '../../Components/Buttons/Button';
 import "../Herosection/Herosection.scss";
+import Image from "../../Images/hero_background.svg"
 
 export default function Herosection() {
   return (
     <div className='container-fluid hero_container'>
         <div className="row hero_container_row1">
-            <div className="col-md-6">
+            <div className="col-12 col-md-6">
                 <h6 className="first_text">
                     WEBFLOW DEVELOPMENT
                 </h6>
@@ -33,7 +34,7 @@ export default function Herosection() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-7"></div>
+            <div className="col-12 col-md-6"><img className='animate__animated animate__zoomIn' src={Image} alt="" /></div>
         </div>
     </div>
   )
