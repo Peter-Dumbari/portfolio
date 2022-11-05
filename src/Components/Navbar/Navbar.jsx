@@ -4,7 +4,7 @@ import logo from "../../Images/navbrandlogo.png"
 import Button from "../Buttons/Button";
 
 
-function Navbar() {
+function Navbar({show, setShow}) {
   const [isActive, setIsActive] = useState(false)
 
 
@@ -45,7 +45,7 @@ function Navbar() {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <Button title={"GET IN TOUCH"} styLe={"blue"}/>
+            <Button title={show? "CLOSE SEARCH" : "GET IN TOUCH"} styLe={"blue"} onclick={()=>setShow(!show)}/>
           </form>
         </div>
       </div>

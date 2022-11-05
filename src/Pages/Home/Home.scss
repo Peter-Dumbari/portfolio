@@ -17,7 +17,8 @@ transition: 2s;
 
 
 .fa-arrow-up{
-    font-weight: bold;
+    font-weight: bolder;
+    
 }
 }
 
@@ -41,4 +42,11 @@ transition: 2s;
 .backtopcontainer:hover .back_to_top_text {
     display: block;
 
+}
+
+.search_container{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    padding: 2rem;
 }

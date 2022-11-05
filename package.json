@@ -13,6 +13,7 @@
     "react-scripts": "5.0.1",
     "react-waypoint": "^10.3.0",
     "sass": "^1.55.0",
+    "waypoints": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

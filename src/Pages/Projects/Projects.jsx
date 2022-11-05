@@ -20,9 +20,7 @@ export default function Projects() {
                 />
               </div>
               <div class="flip-card-back">
-                <h1>John Doe</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
+                <h4>Loading...</h4>
               </div>
             </div>
           </div>
@@ -38,9 +36,7 @@ export default function Projects() {
                 />
               </div>
               <div class="flip-card-back">
-                <h1>John Doe</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
+                <h4>Loading...</h4>
               </div>
             </div>
           </div>

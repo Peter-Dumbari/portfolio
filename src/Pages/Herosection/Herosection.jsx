@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '../../Components/Buttons/Button';
 import "../Herosection/Herosection.scss";
 import Image from "../../Images/hero_background.svg"
 
-export default function Herosection() {
+export default function Herosection({show}) {
+
+    
+
   return (
     <div className='container-fluid hero_container'>
         <div className="row hero_container_row1">

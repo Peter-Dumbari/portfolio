@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Herosection from "../Herosection/Herosection";
 import Projects from "../Projects/Projects";
@@ -10,19 +10,27 @@ import Downstyle from "../Downstyle/Downstyle";
 import Footer from "../../Components/Footer/Footer";
 
 export default function Home() {
+  const [show, setShow] = useState(false);
+
   return (
     <div className="home">
-      <Navbar />
-      <Herosection />
-      <Projects/>
-      <Ourqualities/>
-      <Frequentlyask/>
-      <Biosection/>
-      <Downstyle/>
-      <Footer/>
+      <Navbar show={show} setShow={setShow} />
+      <Herosection show={show} />
+      <Projects />
+      <Ourqualities />
+      <Frequentlyask />
+      <Biosection />
+      <Downstyle />
+      <Footer />
+
+      {show &&
+        <div className="search_container animate__animated animate__bounceInRight">
+          <input className="form-control" type="search" placeholder="Search" />
+        </div>
+      }
       <div className="backtopcontainer">
-      <i className="fa-solid fa-arrow-up"></i> 
-      <p className="back_to_top_text">Top</p>     
+        <i className="fa-solid fa-arrow-up"></i>
+        <p className="back_to_top_text">Top</p>
       </div>
     </div>
   );
