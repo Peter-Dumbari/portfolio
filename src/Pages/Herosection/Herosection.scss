@@ -1,7 +1,9 @@
 .hero_container{
     padding: 3rem;
-    // background: url("../../Images/hero_background.svg") top right no-repeat;
-    background-size: 65%;
+    background: url("../../Images/net.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
 
     .first_text{
         font-weight: bold;

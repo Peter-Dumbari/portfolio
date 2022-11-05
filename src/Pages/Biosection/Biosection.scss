@@ -1,0 +1,26 @@
+.biosection_container {
+  margin-top: 12rem;
+  justify-content: center;
+  padding: 4rem;
+  background-image: url("../../Images/floor_net.svg");
+  background-blend-mode:darken;
+  background-size:cover;
+
+  .bio_data_box {
+    text-align: center;
+    background-color: #4590f6;
+    padding: 3.5rem;
+    width: 75%;
+    border-radius: 10px;
+    color: rgba(253, 249, 249, 0.856);
+    box-shadow: 5px 5px 0px 1px rgba(219, 228, 240, 1);
+    -webkit-box-shadow: 5px 5px 0px 1px rgba(219, 228, 240, 1);
+    -moz-box-shadow: 5px 5px 0px 1px rgba(219, 228, 240, 1);
+    
+    h2{
+        font-weight: bold;
+    }
+
+    
+  }
+}

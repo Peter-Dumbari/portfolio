@@ -13,7 +13,7 @@ export default function Herosection() {
                 </h6>
 
                 <h2 className="second_text">
-                    I build Profitable <br/>
+                    We build Profitable <br/>
                     Webflow Websites.
                 </h2>
 

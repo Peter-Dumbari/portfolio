@@ -1,0 +1,18 @@
+.footer_container {
+  padding: 3rem !important;
+
+  .footer_firstline_items {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: larger;
+  }
+}

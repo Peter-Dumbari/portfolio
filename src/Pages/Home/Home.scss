@@ -1,0 +1,44 @@
+
+.backtopcontainer{
+background-color: #4590f6 ;
+width: 40px;
+text-align: center;
+color: rgba(253, 249, 249, 0.856);
+border-radius: 100px;
+height: auto;
+line-height: 40px;
+cursor: pointer;
+position: fixed;
+right: 40px;
+bottom: 30px;
+transition: 2s;
+
+
+
+
+.fa-arrow-up{
+    font-weight: bold;
+}
+}
+
+.back_to_top_text{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-weight: bolder;
+    left: -2rem;
+    display: none;
+    transition: 0.5s;
+}
+
+.backtopcontainer:hover{
+    background-color: white;
+    color: #4590f6;
+    transition: 2s;
+
+}
+
+.backtopcontainer:hover .back_to_top_text {
+    display: block;
+
+}

@@ -1,0 +1,23 @@
+.downstyle_container{
+    padding: 10rem 0 10rem 0;
+    text-align: center;
+    background-image: url("../../Images/hero_background.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin-top: 2rem;
+
+   
+    .downstyle_box{
+        background-repeat: no-repeat;
+        width: 50%;
+
+        h1{
+            font-weight: bold;
+        }
+
+        h5{
+            font-weight: bold;
+        }
+    }
+}
