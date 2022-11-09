@@ -24,7 +24,7 @@ export default function Herosection({show}) {
                 Leveraging Webflow to craft optimized, responsive and  <br/> profitable websites. In days.
                 </h5>
 
-                <Button title={'GET YOUR SMART WEBSITE'} styLe="blue" logo={<i className="fa-solid fa-earth-americas"></i>}/>
+                <Button title={'GET YOUR SMART WEBSITE'} styLe="blue" ariacontrol="offcanvasRight" datatarget="#offcanvasRight" datatoggle="offcanvas" logo={<i className="fa-solid fa-earth-americas"></i>}/>
 
                 <div className='briefing'>
                     <div className="d-inline-flex listing">

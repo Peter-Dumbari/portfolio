@@ -1,0 +1,32 @@
+.offcanvas_getuscontacted{
+    width: 45% !important;
+   
+}
+
+.getuscontact_close_button{
+    border: 2px solid;
+    border-radius: 40px;
+    float: right !important;
+}
+
+.getuscontact_close_button:hover{
+    transform: rotate(90deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform-origin: center;
+	-moz-transform-origin: center;
+	-webkit-transform-origin: center;
+	transition:  2s ease all;
+	-moz-transition: 2s ease all;
+	-webkit-transition:  2s ease all;
+
+}
+
+
+.offcanvas-header{
+    justify-content: flex-end !important;
+}
+
+.offcanvas-body{
+    padding: 5rem 3rem 3rem 2rem;
+}

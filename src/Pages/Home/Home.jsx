@@ -8,6 +8,8 @@ import Biosection from "../Biosection/Biosection";
 import "../Home/Home.scss";
 import Downstyle from "../Downstyle/Downstyle";
 import Footer from "../../Components/Footer/Footer";
+import Backtotop from "../../Components/Backtotop/Backtotop";
+import Getuscontacted from "../getuscontacted/Getuscontacted";
 
 export default function Home() {
   const [show, setShow] = useState(false);
@@ -22,16 +24,14 @@ export default function Home() {
       <Biosection />
       <Downstyle />
       <Footer />
-
+      <Getuscontacted/>
       {show &&
         <div className="search_container animate__animated animate__bounceInRight">
           <input className="form-control" type="search" placeholder="Search" />
         </div>
       }
-      <div className="backtopcontainer">
-        <i className="fa-solid fa-arrow-up"></i>
-        <p className="back_to_top_text">Top</p>
-      </div>
+      <Backtotop/>
+
     </div>
   );
 }

@@ -22,27 +22,6 @@ transition: 2s;
 }
 }
 
-.back_to_top_text{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    font-weight: bolder;
-    left: -2rem;
-    display: none;
-    transition: 0.5s;
-}
-
-.backtopcontainer:hover{
-    background-color: white;
-    color: #4590f6;
-    transition: 2s;
-
-}
-
-.backtopcontainer:hover .back_to_top_text {
-    display: block;
-
-}
 
 .search_container{
     width: 50%;
