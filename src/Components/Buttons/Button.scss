@@ -26,3 +26,11 @@
     background-color: #4590f6 !important;
    color: rgba(253, 249, 249, 0.856);
 }
+
+.butt:disabled,
+.butt[disabled] {
+  background-color: #458ff68e !important;
+  color: #fff;
+    padding: 10px;
+    cursor:default;
+}

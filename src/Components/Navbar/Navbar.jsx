@@ -45,7 +45,7 @@ function Navbar({show, setShow}) {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <Button title={show? "CLOSE SEARCH" : "GET IN TOUCH"} styLe={"blue"} onclick={()=>setShow(!show)}/>
+            <Button title={show? "CLOSE SEARCH" : "GET IN TOUCH"} styLe={"blue"} onclick={()=>setShow(!show)} type="button"/>
           </form>
         </div>
       </div>

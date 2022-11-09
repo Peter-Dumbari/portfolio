@@ -29,4 +29,71 @@
 
 .offcanvas-body{
     padding: 5rem 3rem 3rem 2rem;
+
+	h1{
+		font-weight:900;
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	h5{
+		font-weight: 700;
+	}
+	
+
+	.getuscontactedforms{
+		margin-top: 3rem;
+
+		label{
+			font-weight: bolder;
+			font-size: 1.1rem;
+		}
+
+		input{
+			width: 90%;
+			padding: 0.8rem !important;
+			margin-bottom: 2.2rem;
+			border-radius: 6px;
+			border: none !important;
+			background-color: rgba(0, 0, 0, 0.322);
+		}
+
+		input:focus{
+			background-color: rgba(0, 0, 0, 0.322);
+			outline:none;
+			border: 1px solid black !important;
+		}
+		
+
+		select{
+			width: 90%;
+			padding: 0.8rem !important;
+			margin-bottom: 2.2rem;
+			border-radius: 6px;
+			border: none !important;
+			background-color: rgba(0, 0, 0, 0.322);
+		}
+
+		select:focus{
+			background-color: rgba(0, 0, 0, 0.322);
+			outline:none;
+			border: 1px solid black !important;
+		}
+
+		textarea{
+			width: 90%;
+			padding: 0.8rem !important;
+			margin-bottom: 2.2rem;
+			border-radius: 6px;
+			border: none !important;
+			background-color: rgba(0, 0, 0, 0.322);
+		}
+
+		textarea:focus{
+			background-color: rgba(0, 0, 0, 0.322);
+			outline:none;
+			border: 2px solid black !important;
+		}
+
+	}
 }
