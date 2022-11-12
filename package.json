@@ -12,6 +12,7 @@
     "react-back-to-top": "^1.0.3",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-waypoint": "^10.3.0",
     "sass": "^1.55.0",

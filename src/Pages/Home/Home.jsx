@@ -10,28 +10,21 @@ import Downstyle from "../Downstyle/Downstyle";
 import Footer from "../../Components/Footer/Footer";
 import Backtotop from "../../Components/Backtotop/Backtotop";
 import Getuscontacted from "../getuscontacted/Getuscontacted";
+import Aboutme from "../Aboutmyself/Aboutme";
 
 export default function Home() {
-  const [show, setShow] = useState(false);
-
   return (
     <div className="home">
-      <Navbar show={show} setShow={setShow} />
-      <Herosection show={show} />
+      <Herosection />
       <Projects />
       <Ourqualities />
       <Frequentlyask />
       <Biosection />
       <Downstyle />
+      <Aboutme/>
       <Footer />
       <Getuscontacted/>
-      {show &&
-        <div className="search_container animate__animated animate__bounceInRight">
-          <input className="form-control" type="search" placeholder="Search" />
-        </div>
-      }
       <Backtotop/>
-
     </div>
   );
 }

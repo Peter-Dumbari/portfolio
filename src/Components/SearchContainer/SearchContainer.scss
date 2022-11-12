@@ -1,0 +1,19 @@
+.modal-footer{
+justify-content: flex-start;
+}
+
+.searchinput_container{
+    
+		input{
+			width: 100%;
+			padding: 0.8rem !important;
+			border-radius: 6px;
+			border: none !important;
+            border: 1px solid black !important;
+		}
+
+		input:focus{
+			outline:none;
+			border: 1px solid black !important;
+		}
+}

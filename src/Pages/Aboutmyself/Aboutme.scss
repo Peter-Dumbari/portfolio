@@ -1,0 +1,42 @@
+.aboutme_container{
+position: relative;
+
+.description_box{
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 3rem 7rem 3rem 3rem;
+
+    h1{
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+.image_box{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    padding: 3rem;
+
+    img{
+        width: 480px;
+        height: auto;
+        border-radius: 10px;
+        -ms-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -webkit-transform: rotate(3deg);
+        -o-transform: rotate(30deg);
+        transition: 0.5s;   
+    }
+
+    img:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+        
+    }
+}
+}
+

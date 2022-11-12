@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../Navbar/Navbar.scss";
 import logo from "../../Images/navbrandlogo.png"
 import Button from "../Buttons/Button";
+import {Link} from "react-router-dom"
+import SearchContainer from "../SearchContainer/SearchContainer";
 
 
 function Navbar({show, setShow}) {
@@ -28,26 +30,25 @@ function Navbar({show, setShow}) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 centeritems">
             <li className="nav-item" >
-              <a className="nav-link"  aria-current="page" href="#">
-                Our Services
-              </a>
+              <Link to="/" className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-              <a className={`nav-link`} href="#">
-                Our Contacts
-              </a>
+              <Link to="/projectsample" className="nav-link">Project Samples</Link>
             </li>
             <li className="nav-item">
-              <a className={`nav-link `} href="#">Project Samples</a>
-            </li>
-            <li className="nav-item">
-              <a className={`nav-link`} href="#">Teams(Coming Soon)</a>
+              <Link to="/teams" className="nav-link">Teams(Coming Soon)</Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <Button title={show? "CLOSE SEARCH" : "GET IN TOUCH"} styLe={"blue"} onclick={()=>setShow(!show)} type="button"/>
+            <Button 
+            title={show? "CLOSE SEARCH" : "GET IN TOUCH"} 
+            styLe={"blue"} onclick={()=>setShow(!show)} 
+            type="button"
+            datatarget="#searchContainer"
+            datatoggle="modal"/>
           </form>
         </div>
+        <SearchContainer/>
       </div>
     </nav>
   );
