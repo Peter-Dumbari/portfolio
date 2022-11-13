@@ -1,0 +1,30 @@
+.project_card{
+
+    img{
+        border: none !important;
+    }
+    .card-body{
+        border: none !important;
+
+        .projecttool{
+            font-weight: bold;
+            color: #131313;
+        }
+    }
+}
+
+.project_card:hover img{
+    transform: scale(1.06);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.project_card:hover{
+    color: #131313;
+}
+
+.ataglink{
+    text-decoration: none;
+    color: #131313;
+
+}
