@@ -4,12 +4,14 @@ import logo from "../../Images/navbrandlogo.png"
 import Button from "../Buttons/Button";
 import {Link} from "react-router-dom"
 import SearchContainer from "../SearchContainer/SearchContainer";
-
+import {NavLink} from  "react-router-dom";
 
 function Navbar({show, setShow}) {
   const [isActive, setIsActive] = useState(false)
 
-
+  const handleIsActive =()=>{
+      setIsActive(!isActive)
+  }
 
   return (
     <nav className="navbar navbar-expand-lg ">
@@ -29,14 +31,14 @@ function Navbar({show, setShow}) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 centeritems">
-            <li className="nav-item" >
-              <Link to="/" className="nav-link">Home</Link>
+            <li className="nav-item">
+            <NavLink to="/" className={`nav-link`}>Home</NavLink>
+            </li> 
+            <li className="nav-item" activeClassName="active">
+            <NavLink to="/projectsample" className={`nav-link`}>Project Samples</NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/projectsample" className="nav-link">Project Samples</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/teams" className="nav-link">Teams(Coming Soon)</Link>
+            <NavLink to="/teams" className={`nav-link`}>Teams (Coming Soon)</NavLink>
             </li>
           </ul>
           <form className="d-flex" role="search">

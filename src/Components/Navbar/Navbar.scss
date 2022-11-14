@@ -12,7 +12,7 @@ nav{
         margin: 0 10px 0 10px !important;
        
         .nav-link{
-            color:  rgb(194, 200, 207) !important;
+            color:  rgb(194, 200, 207) ;
         }
     }
 }
@@ -26,8 +26,10 @@ nav{
 
 
 .active{
-    color: #4590f6 !important;
-    border-bottom: solid 1px;
+    color: #458ff6b6 !important;
+    border-bottom: solid 2px;
+    font-weight: bold;
+    transition: 0.5ms;
 }
 
 
