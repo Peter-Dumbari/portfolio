@@ -1,0 +1,74 @@
+.upload_container{
+    text-align: center;
+
+    .inner_upload_container{
+        width: 50% !important;
+
+        input, select{
+            width: 90%;
+			padding: 0.8rem !important;
+			margin-bottom: 1rem;
+			border-radius: 6px;
+			border: none !important;
+			background-color: rgba(0, 0, 0, 0.322);
+        }
+
+        select{
+            color: rgba(0, 0, 0, 0.425);
+
+            option{
+                color: white;
+            }
+        }
+
+        form{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+
+            label{
+                width: 90%;
+                margin: 0 0 1rem 0;
+            }
+    
+            .imagebox{
+                border: 3px dashed;
+                padding: 2rem;
+                background-color: rgba(0, 0, 0, 0.322);
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.loader_container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.116);
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+}

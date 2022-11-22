@@ -34,7 +34,7 @@ function Navbar({show, setShow}) {
             <li className="nav-item">
             <NavLink to="/" className={`nav-link`}>Home</NavLink>
             </li> 
-            <li className="nav-item" activeClassName="active">
+            <li className="nav-item">
             <NavLink to="/projectsample" className={`nav-link`}>Project Samples</NavLink>
             </li>
             <li className="nav-item">
