@@ -1,27 +1,25 @@
 import React, { useRef, useState } from "react";
 import "../getuscontacted/Getuscontacted.scss";
 import Button from "../../Components/Buttons/Button";
-import ReCAPTCHA from "react-google-recaptcha";
+
 
 
 export default function Getuscontacted() {
-  const [verified, setVerified] = useState(false)
   const namevalue = useRef(null)
   const emailvalue = useRef(null)
   const [name, setName] =  useState("")
   const [email, setEmail] =  useState("")
+  const [isLoading, setIsLoading] =  useState(false)
+
+
  
-
-
-  const temderynder=()=>{
-    setVerified(true)
-  }
  
   const handleSubmit=(e)=>{
     e.preventDefault()
-    alert(name + " " + email)
-    setName("")
-    setEmail("")
+    const timeout = setTimeout(() => {
+      setIsLoading(false)
+    }, 5000)
+    timeout()
   } 
   return (
     <div
@@ -74,8 +72,8 @@ export default function Getuscontacted() {
             rows="3"
             placeholder="Please tell us a bit about the project" required></textarea>
           <br />
-          <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" onChange={temderynder}/><br />
-          <Button disable={!verified} title="SUBMIT YOUR REQUEST" styLe="blue" type="submit"/>
+         
+          <Button disable={isLoading} title={ isLoading? 'Loading...':'SUBMIT YOUR REQUEST'} logo={ isLoading && <i className="fa fa-circle-o-notch fa-spin"></i>} styLe="blue" type="submit"/>
         </form>
       </div>
     </div>

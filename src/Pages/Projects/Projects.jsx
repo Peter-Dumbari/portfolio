@@ -2,7 +2,8 @@ import React from "react";
 import "../Projects/Projects.scss";
 import Logo from "../../Images/Tams-Tech.JPG"
 import Belka from "../../Images/belkanigeria.JPG"
-import Buttons from "../../Components/Buttons/Button"
+import Buttons from "../../Components/Buttons/Button";
+import { Link } from "react-router-dom";
   
 
 export default function Projects() {
@@ -17,31 +18,21 @@ export default function Projects() {
       <div className="row project_sample_container">
         {
           mappedProject.map((items)=>
-            <div className="col-6" key={items.id}>
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
+            <div className="col-md-6" key={items.id}>
+               <div className="card">
                 <img
                   src={items.projectPic}
                   alt="Avatar"
-                  style={{width:"100%", height:"400px"}}
+                  style={{maxWidth:"100%", height:"400px"}}
                 />
               </div>
-              <div className="flip-card-back">
-                <h4>{items.projectName}</h4>
-                <h6>Description: {items.projectDesc}</h6>
-                <h6>Status: {items.projectStatus}</h6>
-                <h6>Year: {items.projectDate}</h6>
-
-               <Buttons title="view site" styLe="blue"/> 
-              </div>
-            </div>
-          </div>
         </div>
           )
         }
       </div>
+      <Link to="/projectsample">
       <Buttons title={"VIEW MORE PROJECTS"} styLe={'blue'} logo={<i className="fa-solid fa-earth-americas"></i>} type="button"/>
+      </Link>
     </div>
   );
 }

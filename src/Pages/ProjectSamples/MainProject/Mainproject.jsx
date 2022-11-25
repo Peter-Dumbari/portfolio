@@ -1,13 +1,16 @@
 import React from "react";
 import Emptyproject from "../Emptyproject/Emptyproject";
 import "../MainProject/Mainproject.scss";
-
+import Loader from "../../../Components/Loader/Loader"
 
 export default function Mainproject({projects,loading}) {
   return (
     <div className="row">
-      
-      {loading? "Loading..." :  projects.length === 0 ? <Emptyproject/> : projects.map((project) => (
+       <div id="follower">
+  <div id="circle1"></div>
+  <div id="circle2"></div>
+</div>
+      {loading? <Loader/> :  projects.length === 0 ? <Emptyproject/> : projects.map((project) => (
         <div className="col-md-4" key={project.id}>
           <a href={project.Projecthref} className="ataglink">
             <div className="card project_card">
