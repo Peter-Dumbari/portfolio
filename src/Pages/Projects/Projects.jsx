@@ -23,7 +23,6 @@ export default function Projects() {
                 <img
                   src={items.projectPic}
                   alt="Avatar"
-                  style={{maxWidth:"100%", height:"400px"}}
                 />
               </div>
         </div>

@@ -6,7 +6,7 @@ export default function Ourqualities() {
   return (
     <div className='container qualities_container'>
         <h1 className="qualities_header">Why you need us?</h1>
-        <div className="d-inline-flex">
+        <div className="d-inline-flex butons">
             <Qbuttons text={"FAST TURNAROUND"}/>
             <Qbuttons text={"ADVANCED ANIMATIONS"}/>
             <Qbuttons text={"FREE SEO SETUP"}/>

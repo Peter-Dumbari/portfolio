@@ -16,6 +16,11 @@
 .card{
   padding: 2rem;
 
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
   img:hover{
     transform: scale(0.9);
     transition: 0.5s;
