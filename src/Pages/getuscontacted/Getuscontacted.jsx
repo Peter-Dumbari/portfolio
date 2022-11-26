@@ -1,25 +1,47 @@
 import React, { useRef, useState } from "react";
 import "../getuscontacted/Getuscontacted.scss";
 import Button from "../../Components/Buttons/Button";
-
+import { useEffect } from "react";
+import {db} from "../../Firebase_configuration";
+import { collection, addDoc } from "firebase/firestore";
+import Toast from "../../Components/Toasts/Toast";
 
 
 export default function Getuscontacted() {
-  const namevalue = useRef(null)
-  const emailvalue = useRef(null)
-  const [name, setName] =  useState("")
-  const [email, setEmail] =  useState("")
+  const nameValue = useRef()
+  const emailValue = useRef()
+  const amountValue =  useRef()
+  const designLinkValue = useRef()
+  const projectSummaryValue = useRef()
+
+  const [siteName, setSiteName]=useState("")
+  const [email,setEmail]=useState("")
+  const [amountRange, setAmountRange]=useState(0)
+  const [designLink, setDesignLink]=useState("")
+  const [projectSummary, setProjectSummary]=useState("")
+  
   const [isLoading, setIsLoading] =  useState(false)
 
 
- 
- 
+  const clientInfo ={
+    Sitename: siteName,
+    Email: email,
+    AmountRange: amountRange,
+    Designlink: designLink,
+    Projectsummary: projectSummary
+  }
+
   const handleSubmit=(e)=>{
     e.preventDefault()
-    const timeout = setTimeout(() => {
-      setIsLoading(false)
-    }, 5000)
-    timeout()
+    setIsLoading(true)
+    alert(
+    )
+
+    setSiteName("")
+    setEmail("")
+    setAmountRange("")
+    setDesignLink("")
+    setProjectSummary("")
   } 
   return (
     <div
@@ -42,18 +64,18 @@ export default function Getuscontacted() {
           get back to you right away!
         </h6>
 
-        <form className="getuscontactedforms form-group" onSubmit={handleSubmit}>
+        <form className="getuscontactedforms form-group">
           <label htmlFor="Name">YOUR NAME*</label>
           <br />
-          <input type="text" placeholder="Peter Dumbari" ref={namevalue} onChange={(e)=>setName(e.target.value)} value={name} required/>
+          <input type="text" placeholder="Peter Dumbari" value={siteName} onChange={e =>setSiteName(e.target.value)}  required/>
           <br />
           <label htmlFor="Email">YOUR EMAIL*</label>
           <br />
-          <input type="email" placeholder="testing@peters.com" ref={emailvalue} onChange={(e)=>setEmail(e.target.value)} value={email} required/>
+          <input type="email" placeholder="testing@peters.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
           <br />
           <label htmlFor="Budget">WHAT IS YOUR BUDGET (₦)?*</label>
           <br />
-          <select name="your budget" id="" required>
+          <select name="your budget" id="" value={amountRange} onChange={e=>setAmountRange(e.target.value)} required >
             <option value="N500k - N1m">N500k - N1m</option>
             <option value="N300k -N400k">N300k -N400k</option>
             <option value="N100k - N200k">N100k - N200k</option>
@@ -61,7 +83,7 @@ export default function Getuscontacted() {
           <br />
           <label htmlFor="design link">DESIGN LINK (FIGMA,Xd..)*</label>
           <br />
-          <input type="text" placeholder="figma.com/your-design-link" required/>
+          <input type="text" placeholder="figma.com/your-design-link" value={designLink} onChange={e=>setDesignLink(e.target.value)} required/>
           <br />
           <label htmlFor="project description">PROJECT SUMMARY*</label>
           <br />
@@ -70,10 +92,9 @@ export default function Getuscontacted() {
             id=""
             cols="30"
             rows="3"
-            placeholder="Please tell us a bit about the project" required></textarea>
+            placeholder="Please tell us a bit about the project" value={projectSummary}  onChange={e=>setProjectSummary(e.target.value)} required></textarea>
           <br />
-         
-          <Button disable={isLoading} title={ isLoading? 'Loading...':'SUBMIT YOUR REQUEST'} logo={ isLoading && <i className="fa fa-circle-o-notch fa-spin"></i>} styLe="blue" type="submit"/>
+          <Button disable={isLoading} title={ isLoading? 'Loading ':'SUBMIT YOUR REQUEST'} logo={ isLoading && <i className="fa fa-circle-o-notch fa-spin"></i>} styLe="blue" handleSubmit={handleSubmit} />
         </form>
       </div>
     </div>

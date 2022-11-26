@@ -19,7 +19,7 @@ export default function Projects() {
         {
           mappedProject.map((items)=>
             <div className="col-md-6" key={items.id}>
-               <div className="card">
+               <div className="cardlike">
                 <img
                   src={items.projectPic}
                   alt="Avatar"
