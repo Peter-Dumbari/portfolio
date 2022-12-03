@@ -24,3 +24,20 @@
     
   }
 }
+
+@media only screen and (max-width: 600px) {
+.biosection_container{
+  margin-top: 2rem;
+  padding: 4rem;
+
+
+  .bio_data_box{
+    padding: 1.5rem;
+    width: 100%;  
+
+    h2{
+      font-size: 3vh;
+    }
+  }
+}
+}

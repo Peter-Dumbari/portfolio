@@ -40,3 +40,45 @@ position: relative;
 }
 }
 
+
+@media only screen and (max-width: 600px) {
+
+    .description_box{
+        padding: 2rem;
+    
+        h1{
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+    
+        p{
+            font-size: 1rem;
+        }
+    }
+    
+    .image_box{
+        position:static;
+        top: 0;
+        right: 10%;
+        padding: 3rem;
+        text-align: center;
+    
+        img{
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: scale(0);
+
+        }
+    
+        img:hover{
+            transform: scale(0);
+            transition: 0;
+            
+        }
+    }
+}

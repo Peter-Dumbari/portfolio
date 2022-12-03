@@ -10,7 +10,7 @@ export default function Herosection({show}) {
   return (
     <div className='container-fluid hero_container'>
         <div className="row hero_container_row1">
-            <div className="col-sm-12 col-md-6">
+            <div className="col-12 col-md-6">
                 <h6 className="first_text">
                     WEBFLOW DEVELOPMENT
                 </h6>

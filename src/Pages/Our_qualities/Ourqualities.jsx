@@ -12,7 +12,7 @@ export default function Ourqualities() {
             <Qbuttons text={"FREE SEO SETUP"}/>
             <Qbuttons text={"LIGHTNING-FAST WEBSITE"}/>
         </div>
-        <div className="d-inline-flex">
+        <div className="d-inline-flex qualities">
             <Qbuttons text={"RESPONSIVE DESIGN"}/>
             <Qbuttons text={"PIXEL-PERFECT"}/>
             <Qbuttons text={"WEB3 READY"}/>

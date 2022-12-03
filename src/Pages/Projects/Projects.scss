@@ -26,5 +26,11 @@
     transition: 0.5s;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .project_container{
+    margin-top: 1rem;
+  }
+}
  
 

@@ -9,8 +9,9 @@
 
    
     .downstyle_box{
-        background-repeat: no-repeat;
-        width: 50%;
+        background-size: 100%;
+        padding: 2rem;
+        width: 100%;
 
         h1{
             font-weight: bold;
@@ -20,4 +21,14 @@
             font-weight: bold;
         }
     }
+}
+
+@media only screen and (max-width: 600px) {
+.downstyle_container{
+    padding: 2rem 0 2rem 0;
+
+    .downstyle_box{
+        width: 80%;
+    }
+}
 }

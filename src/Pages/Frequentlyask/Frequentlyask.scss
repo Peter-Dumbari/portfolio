@@ -26,5 +26,13 @@
     color: black !important;
 }
 
+@media only screen and (max-width: 600px) {
+.freqently_container{
+    width: 90% !important;
+    font-size: 1rem;
+    padding: 0;
+    margin-top: 2rem;
+}    
+}
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Navbar/Navbar.scss";
 import logo from "../../Images/navbrandlogo.png"
 import Button from "../Buttons/Button";
@@ -12,6 +12,12 @@ function Navbar({show, setShow}) {
   const handleIsActive =()=>{
       setIsActive(!isActive)
   }
+
+  let width = window.innerWidth
+  
+  useEffect(() => {
+    console.log(window.innerWidth)
+  })
 
   return (
     <nav className="navbar navbar-expand-lg ">
@@ -42,12 +48,12 @@ function Navbar({show, setShow}) {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <Button 
+              <Button 
             title={show? "CLOSE SEARCH" : "GET IN TOUCH"} 
             styLe={"blue"} onclick={()=>setShow(!show)} 
             type="button"
             datatarget="#searchContainer"
-            datatoggle="modal"/>
+            datatoggle="modal"/>            
           </form>
         </div>
         <SearchContainer/>

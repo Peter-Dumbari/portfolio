@@ -32,6 +32,34 @@ nav{
     transition: 0.5ms;
 }
 
+// Media Screens
+
+
+nav{
+  font-size: 100%;
+  padding: 1rem !important;
+
+  @media only screen and (max-width: 600px) {
+.navbar-brand img{
+    width: 40px;
+  }
+
+  .centeritems{
+    margin-top: 5%;
+}
+
+form{
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+
+  .active{
+    width: fit-content;
+}
+}
+
+}
 
 @keyframes App-logo-spin {
   from {
