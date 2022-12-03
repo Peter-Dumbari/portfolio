@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import Home from "./Pages/Home/Home";
 import Projectsamples from "./Pages/ProjectSamples/Projectsamples";
 import Teams from "./Pages/Teams/Teams";
@@ -11,6 +11,8 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "./Firebase_configuration";
 function App() {
   const [projects, setProjects] = useState([]);
+
+  const About = lazy(() => import(Projectsamples));
 
   const projectCollectionRef = collection(db, "Projects");
   const [isLoading, setIsLoading] = useState(true);

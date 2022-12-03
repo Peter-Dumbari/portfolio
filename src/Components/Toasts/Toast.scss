@@ -1,0 +1,28 @@
+.toast_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4590f6;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
+
+    span{
+        color: white;
+
+        .fa-thumbs-up{
+            margin-right: 2rem;
+        }
+    }
+
+    button{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+    }
+
+
+}
