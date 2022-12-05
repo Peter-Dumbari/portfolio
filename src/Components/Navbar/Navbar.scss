@@ -50,8 +50,8 @@ nav{
 
 form{
   position: absolute;
-  top: 5%;
-  left: 30%;
+  right: 5%;
+  top: 75%;
 }
 
   .active{
@@ -59,7 +59,22 @@ form{
 }
 }
 
+.mini_search_button{
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 5px;
+  border-radius: 5px;
+  color: #4590f6 ;
 }
+
+.mini_search_button:hover{
+  background-color: #4590f6;
+  transition: 0.2s;
+  color: white;
+}
+}
+
+
 
 @keyframes App-logo-spin {
   from {
