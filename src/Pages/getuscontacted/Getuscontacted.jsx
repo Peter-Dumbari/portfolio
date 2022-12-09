@@ -22,28 +22,28 @@ export default function Getuscontacted() {
 
   const clientsRef = collection(db, "Clients");
 
-  const handleSubmit = (e) => {
+  const handleSubmit =(e) => {
     setIsLoading(true);
     e.preventDefault();
 
-    addDoc(clientsRef, {
+     addDoc(clientsRef, {
       Sitname: siteName,
       Email: email,
       AmountRange: amountRange,
       DesignLink: designLink,
       Projectsummary: projectSummary,
-    }).then(
-      setTimeout(() => {
-        setIsLoading(false);
-        setAlerter(true);
+    })
+    .then((res)=>{
+        console.log(res )
+    })
+      setIsLoading(false);
+      setAlerter(true);
 
-        setSiteName("");
-        setEmail("");
-        setAmountRange("");
-        setDesignLink("");
-        setProjectSummary("");
-      }, 5000)
-    );
+      setSiteName("");
+      setEmail("");
+      setAmountRange("");
+      setDesignLink("");
+      setProjectSummary("");
   };
   return (
     <showContext.Provider value={setAlerter}>
