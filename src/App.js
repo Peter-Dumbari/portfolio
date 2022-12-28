@@ -32,7 +32,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route
           path="/projectsample"
           element={<Projectsamples projects={projects} loading={isLoading} />}
