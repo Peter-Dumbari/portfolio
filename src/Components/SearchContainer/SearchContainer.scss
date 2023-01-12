@@ -3,17 +3,38 @@ justify-content: flex-start;
 }
 
 .searchinput_container{
-    
+    align-items: center !important;
+	justify-content: center;
+	border: 1px solid;
+	width: 80%;
+	padding: 1px ;
+	border-radius: 5px;
+	transition: 0.2s;
+
+	span{
+		padding: 10px;
+		font-size: larger;
+	}
 		input{
 			width: 100%;
 			padding: 0.8rem !important;
 			border-radius: 6px;
 			border: none !important;
-            border: 1px solid black !important;
+			
 		}
-
 		input:focus{
 			outline:none;
-			border: 1px solid black !important;
 		}
+		::placeholder{
+			font-size: 100%;
+		}
+
+		
+}
+.searchinput_container:focus-within{
+	border: 1px solid;
+	border-color: #4590f6;
+	color: #4590f6;
+	transition: 0.2s;
+	width: 100%;
 }

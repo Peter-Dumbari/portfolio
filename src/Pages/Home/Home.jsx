@@ -30,7 +30,7 @@ export default function Home() {
       <Aboutme/>
       <Footer />
       <Getuscontacted/>
-      <Backtotop/>
+      {/* <Backtotop/> */}
     </div>
   );
 }

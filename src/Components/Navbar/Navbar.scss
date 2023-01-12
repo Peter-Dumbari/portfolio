@@ -17,6 +17,16 @@ nav{
     }
 }
 
+.fixed-top{
+  background-color: rgb(245, 242, 242) !important;
+  border-bottom: 2px solid #4590f6;
+  transition: 0.8s;
+}
+
+.navbar{
+  transition: 0.5s;
+}
+
 .centeritems{
     align-self: center !important;
     width: 85% !important;

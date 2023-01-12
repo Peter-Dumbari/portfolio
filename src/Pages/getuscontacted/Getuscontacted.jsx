@@ -6,8 +6,11 @@ import { db } from "../../Firebase_configuration";
 import { collection, addDoc } from "firebase/firestore";
 import Toast from "../../Components/Toasts/Toast";
 import { createContext } from "react";
+import { toast } from "react-toastify";
+import axios from 'axios';
 
 export const showContext = createContext();
+
 
 export default function Getuscontacted() {
   const [siteName, setSiteName] = useState("");
@@ -21,24 +24,33 @@ export default function Getuscontacted() {
   const [alerter, setAlerter] = useState(false);
 
   const clientsRef = collection(db, "Clients");
+  const date = new Date().toISOString().slice(0, 10)
 
-  const handleSubmit =(e) => {
+  const data = {
+    siteName: siteName,
+    Email: email,
+    AmountRange: amountRange,
+    DesignLink: designLink,
+    Projecsummary: projectSummary,
+    Date: date
+  }
+
+  const handleSubmit =async(e) => {
     setIsLoading(true);
     e.preventDefault();
 
-     addDoc(clientsRef, {
-      Sitname: siteName,
-      Email: email,
-      AmountRange: amountRange,
-      DesignLink: designLink,
-      Projectsummary: projectSummary,
-    })
-    .then((res)=>{
-        console.log(res )
-    })
-      setIsLoading(false);
-      setAlerter(true);
-
+    await axios.post("https://portfolio-dc49e-default-rtdb.firebaseio.com/.json", data)
+    .then(res =>{
+        console.log(res)
+        if(res.status === 200){
+          toast.success("We have successfully received your message, we reach you sooner!")
+        }
+    }).catch(err =>{
+        toast.error(err)
+    }).finally(
+      setIsLoading(false)
+    )
+     
       setSiteName("");
       setEmail("");
       setAmountRange("");
@@ -70,7 +82,7 @@ export default function Getuscontacted() {
           <form
             onSubmit={handleSubmit}
             className="getuscontactedforms form-group">
-            <label htmlFor="Name">YOUR NAME*</label>
+            <label htmlFor="Name">YOUR NAME <span className="asteris">*</span></label>
             <br />
             <input
               type="text"
@@ -80,7 +92,7 @@ export default function Getuscontacted() {
               required
             />
             <br />
-            <label htmlFor="Email">YOUR EMAIL*</label>
+            <label htmlFor="Email">YOUR EMAIL <span className="asteris">*</span></label>
             <br />
             <input
               type="email"
@@ -90,30 +102,30 @@ export default function Getuscontacted() {
               required
             />
             <br />
-            <label htmlFor="Budget">WHAT IS YOUR BUDGET (₦)?*</label>
+            <label htmlFor="Budget">WHAT IS YOUR BUDGET (₦)? <span className="asteris">*</span></label>
             <br />
             <select
               name="your budget"
-              id=""
               value={amountRange}
               onChange={(e) => setAmountRange(e.target.value)}
               required>
+              <option value="none" hidden >Select an Option</option>
               <option value="N500k - N1m">N500k - N1m</option>
               <option value="N300k -N400k">N300k -N400k</option>
               <option value="N100k - N200k">N100k - N200k</option>
             </select>
             <br />
-            <label htmlFor="design link">DESIGN LINK (FIGMA,Xd..)*</label>
+            <label htmlFor="design link">DESIGN LINK (FIGMA,Xd..)<span className="asteris">*</span></label>
             <br />
             <input
-              type="text"
-              placeholder="figma.com/your-design-link"
+              type="url"
+              placeholder="http://figma.com/your-design-link"
               value={designLink}
               onChange={(e) => setDesignLink(e.target.value)}
               required
             />
             <br />
-            <label htmlFor="project description">PROJECT SUMMARY*</label>
+            <label htmlFor="project description">PROJECT SUMMARY <span className="asteris">*</span></label>
             <br />
             <textarea
               name=""

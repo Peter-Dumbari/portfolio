@@ -5,10 +5,11 @@ import Button from "../Buttons/Button";
 import { Link } from "react-router-dom";
 import SearchContainer from "../SearchContainer/SearchContainer";
 import { NavLink } from "react-router-dom";
+import { Waypoint } from "react-waypoint";
 
 function Navbar({ show, setShow }) {
   const [isActive, setIsActive] = useState(false);
-
+  const [webFlow, setWebFlow] =useState("")
   const handleIsActive = () => {
     setIsActive(!isActive);
   };
@@ -16,7 +17,17 @@ function Navbar({ show, setShow }) {
   const width = window.innerWidth;
 
   return (
-    <nav className="navbar navbar-expand-lg ">
+    <>
+    <Waypoint
+    onEnter={() =>
+    setWebFlow("")
+    }
+    onLeave={() => setWebFlow("fixed-top")}
+    topOffset="-10%"
+    bottomOffset="10px"
+    />
+                
+    <nav className={`navbar navbar-expand-lg ${webFlow}`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
         <img src={logo} alt="" />
@@ -38,7 +49,7 @@ function Navbar({ show, setShow }) {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item">         
               <NavLink to="/projectsample" className={`nav-link`}>
                 Project Samples
               </NavLink>
@@ -73,6 +84,7 @@ function Navbar({ show, setShow }) {
         <SearchContainer />
       </div>
     </nav>
+    </>
   );
 }
 

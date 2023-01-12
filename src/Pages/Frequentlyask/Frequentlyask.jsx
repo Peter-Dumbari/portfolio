@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Frequentlyask/Frequentlyask.scss";
+import { Waypoint } from 'react-waypoint';
+
 
 export default function Frequentlyask() {
+  const [classname, setClassname] =useState("")
+  const [classnam, setClassnam]=useState("")
+
+  
   return (
     <div className="container freqently_container">
       <h1>Frequently Asked Questions

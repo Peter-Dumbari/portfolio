@@ -7,6 +7,7 @@
     border: 2px solid;
     border-radius: 40px;
     float: right !important;
+	color: #4590f6;
 }
 
 .getuscontact_close_button:hover{
@@ -34,6 +35,7 @@
 		font-weight:900;
 		font-size: 3rem;
 		margin-bottom: 1rem;
+		color:  #4590f6;
 	}
 
 	h5{
@@ -43,6 +45,9 @@
 
 	.getuscontactedforms{
 		margin-top: 3rem;
+		.asteris{
+			color: red;
+		}
 
 		label{
 			font-weight: bolder;
@@ -87,6 +92,7 @@
 			border-radius: 6px;
 			border: none !important;
 			background-color: rgba(0, 0, 0, 0.322);
+			resize: none;
 		}
 
 		textarea:focus{

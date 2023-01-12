@@ -9,6 +9,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Myform from "./Pages/Myform/Myform";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./Firebase_configuration";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [projects, setProjects] = useState([]);
 
@@ -31,6 +33,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <ToastContainer position="top-center" theme="dark" />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route

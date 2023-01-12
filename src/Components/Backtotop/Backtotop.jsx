@@ -23,6 +23,7 @@ export default function Backtotop() {
       percent={true}
       visiblePercent={20}
       span="Top"
+
     />
   );
 }

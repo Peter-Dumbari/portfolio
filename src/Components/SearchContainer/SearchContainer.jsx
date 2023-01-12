@@ -13,12 +13,13 @@ export default function SearchContainer() {
         <div className="modal-content">
           <div className="modal-header"></div>
           <div className="modal-body">
-            <div className="searchinput_container">
+            <div className="searchinput_container d-inline-flex">
+              <span><i className="fas fa-search"></i></span>
               <input type="search" placeholder="Search" />
             </div>
           </div>
           <div className="modal-footer">
-            <span>Recently search</span>
+            <span>Recently searched</span>
           </div>
         </div>
       </div>
