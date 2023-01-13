@@ -56,7 +56,7 @@ function Navbar({ show, setShow }) {
             </li>
             <li className="nav-item">
               <NavLink to="/teams" className={`nav-link`}>
-                Teams (Coming Soon)
+                Curriculum Vitae (Coming Soon)
               </NavLink>
             </li>
           </ul>
