@@ -2,7 +2,6 @@ nav{
     padding: 2rem !important;
     font-size: larger;
     font-weight: 500;
-
     .navbar-brand img{
         width: 70px;
         animation: App-logo-spin infinite 20s linear;
@@ -18,13 +17,15 @@ nav{
 }
 
 .fixed-top{
-  background-color: rgb(245, 242, 242) !important;
+  background-color: #fff !important;
   border-bottom: 2px solid #4590f6;
   transition: 0.8s;
 }
 
 .navbar{
   transition: 0.5s;
+  z-index: 3;
+
 }
 
 .centeritems{

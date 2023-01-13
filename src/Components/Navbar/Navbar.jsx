@@ -20,7 +20,7 @@ function Navbar({ show, setShow }) {
     <>
     <Waypoint
     onEnter={() =>
-    setWebFlow("")
+    setWebFlow("navbar")
     }
     onLeave={() => setWebFlow("fixed-top")}
     topOffset="-10%"

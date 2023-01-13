@@ -1,3 +1,10 @@
+
+.fade{
+	z-index: 2;
+	.modal-body{
+		z-index: 2 !important;
+	}
+}
 .modal-footer{
 justify-content: flex-start;
 }
