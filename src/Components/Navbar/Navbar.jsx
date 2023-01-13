@@ -20,7 +20,7 @@ function Navbar({ show, setShow }) {
     <>
     <Waypoint
     onEnter={() =>
-    setWebFlow("navbar")
+    setWebFlow("animate__animated animate__headShake")
     }
     onLeave={() => setWebFlow("fixed-top")}
     topOffset="-10%"

@@ -11,6 +11,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "./Firebase_configuration";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FirebaseError } from "firebase/app";
 function App() {
   const [projects, setProjects] = useState([]);
 
@@ -20,14 +21,18 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const getProjects = async () => {
-      const projectDatas = await getDocs(projectCollectionRef);
-      setIsLoading(false);
-      setProjects(
-        projectDatas.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      );
-    };
-    getProjects();
+    try {
+      const getProjects = async () => {
+        const projectDatas = await getDocs(projectCollectionRef);
+        setIsLoading(false);
+        setProjects(
+          projectDatas.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+        );
+      };
+      getProjects();
+    } catch {
+      console.log(FirebaseError);
+    }
   }, [projects]);
 
   return (

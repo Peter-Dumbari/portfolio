@@ -1,97 +1,98 @@
 nav{
-    padding: 2rem !important;
-    font-size: larger;
-    font-weight: 500;
-    .navbar-brand img{
-        width: 70px;
-        animation: App-logo-spin infinite 20s linear;
-    }
+  padding: 2rem !important;
+  font-size: larger;
+  font-weight: 500;
 
-    .nav-item{
-        margin: 0 10px 0 10px !important;
-       
-        .nav-link{
-            color:  rgb(194, 200, 207) ;
-        }
-    }
+  .navbar-brand img{
+      width: 70px;
+      animation: App-logo-spin infinite 20s linear;
+  }
+
+  .nav-item{
+      margin: 0 10px 0 10px !important;
+     
+      .nav-link{
+          color:  rgb(194, 200, 207) ;
+      }
+  }
 }
 
 .fixed-top{
-  background-color: #fff !important;
-  border-bottom: 2px solid #4590f6;
-  transition: 0.8s;
+background-color: #fff !important;
+border-bottom: 2px solid #4590f6;
+transition: 0.8s;
 }
 
-.navbar{
-  transition: 0.5s;
-  z-index: 3;
+.navbar, .animate__headShake{
+transition: 0.5s;
+z-index: 99 !important ;
 
 }
 
 .centeritems{
-    align-self: center !important;
-    width: 85% !important;
-    justify-content: center !important;
+  align-self: center !important;
+  width: 85% !important;
+  justify-content: center !important;
 }
 
 
 
 .active{
-    color: #458ff6b6 !important;
-    border-bottom: solid 2px;
-    font-weight: bold;
-    transition: 0.5ms;
+  color: #458ff6b6 !important;
+  border-bottom: solid 2px;
+  font-weight: bold;
+  transition: 0.5ms;
 }
 
 // Media Screens
 
 
 nav{
-  font-size: 100%;
-  padding: 1rem !important;
+font-size: 100%;
+padding: 1rem !important;
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 .navbar-brand img{
-    width: 40px;
-  }
+  width: 40px;
+}
 
-  .centeritems{
-    margin-top: 5%;
+.centeritems{
+  margin-top: 5%;
 }
 
 form{
-  position: absolute;
-  right: 5%;
-  top: 75%;
+position: absolute;
+right: 5%;
+top: 75%;
 }
 
-  .active{
-    width: fit-content;
+.active{
+  width: fit-content;
 }
 }
 
 .mini_search_button{
-  cursor: pointer;
-  transition: 0.2s;
-  padding: 5px;
-  border-radius: 5px;
-  color: #4590f6 ;
+cursor: pointer;
+transition: 0.2s;
+padding: 5px;
+border-radius: 5px;
+color: #4590f6 ;
 }
 
 .mini_search_button:hover{
-  background-color: #4590f6;
-  transition: 0.2s;
-  color: white;
+background-color: #4590f6;
+transition: 0.2s;
+color: white;
 }
 }
 
 
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
 }
