@@ -3,7 +3,7 @@ import Button from '../../Components/Buttons/Button';
 import "../Herosection/Herosection.scss";
 import Image from "../../Images/hero_background.svg"
 
-export default function Herosection({show}) {
+export default function Herosection() {
 
     
 

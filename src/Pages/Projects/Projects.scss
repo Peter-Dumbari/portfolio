@@ -2,6 +2,7 @@
     padding: 3rem !important;
     margin-top: 4rem;
     text-align: center;
+    
 
     .project_header{
         font-family: 'RubikMonoOne-Regular';
@@ -10,21 +11,37 @@
 
     .project_sample_container{
       margin-bottom: 3rem;
+
+      .projectcolumn{
+        margin-bottom: 2rem !important;
+        padding: 3rem;
+        background-color: rgba(0, 0, 0, 0.091);
+        position: relative;
+        
+        .miniBtn_holder{
+          position: absolute; 
+          top: 80%;
+          right: 10%; 
+          display: none;
+        }
+      }
+
+      .projectcolumn:hover .miniBtn_holder {
+        display: block;
+      }
+
     }
+
+    
 }
 
 .cardlike{
-  padding: 2rem;
 
   img{
     max-width: 100%;
-    height: auto;
+    
   }
 
-  img:hover{
-    transform: scale(0.9);
-    transition: 0.5s;
-  }
 }
 
 @media only screen and (max-width: 600px) {

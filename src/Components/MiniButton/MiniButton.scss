@@ -1,0 +1,17 @@
+.link_arrow{
+    background-color: white;
+    padding: 15px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    .fa-arrow-down{
+      transform: rotate(240deg);
+      font-weight: bolder;
+    }
+  }
+
+  .link_arrow:hover{
+    transition: ease-in-out ;
+  }

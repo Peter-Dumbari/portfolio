@@ -11,7 +11,6 @@ export default function SearchContainer() {
       aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content">
-          <div className="modal-header"></div>
           <div className="modal-body">
             <div className="searchinput_container d-inline-flex">
               <span><i className="fas fa-search"></i></span>
