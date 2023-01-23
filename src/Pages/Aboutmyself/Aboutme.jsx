@@ -32,7 +32,7 @@ export default function Aboutme() {
 
           <p>With this formula, I’ve launched and grown multiple projects from ground zero to over a million dollars in revenue before, ultimately, being acquired.</p>
 
-          <p>Right now, I’m working as a Principal Software Engineer at Tams-Technology, leading the effort to revolutionize webdevelopment  with industry-leading design and dev tools. I’m also working as a free lancer, an effort to share everything I’ve learned about creating and selling successful digital products.</p>
+          <p>Right now, I’m working as a Principal Software Engineer at Tams-Technology, leading the effort to revolutionize webdevelopment  with industry-leading design and dev tools. I’m also working as a free lancer.</p>
         </div>
       </div>
       <div className={`col-md-4 image_box ${classnam}`}>
