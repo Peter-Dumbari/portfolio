@@ -27,7 +27,6 @@ export default function Aboutme() {
                 />
         <div className={`col-md-8 description_box ${classname}`}>
           <h1>Meet Peterz</h1>
-          <p>For overtime now, I’ve been hard at work founding, growing, and selling delightful digital products that are used and loved by hundreds of thousands of creators across the web.</p>
 
           <p>As a frontend developer, I’m passionate about solving complex problems with reactjs by combining research, clever technology, and thoughtful design. As a principal engineer, I’m passionate about leading teams, leveling-up coworkers, and curating a culture of quality that breathes life into products and consistently drives results.</p>
 

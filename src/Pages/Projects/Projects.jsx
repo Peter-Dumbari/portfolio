@@ -20,8 +20,8 @@ export default function Projects() {
     },
     {
       id: 1,
-      projectPic: `${Belka}`,
-      href: "https://belkanigeria.herokuapp.com"
+      projectPic: `https://res.cloudinary.com/tamstech-computer-repair-center/image/upload/v1670431740/Portfolio/lazksport_bvkbbs.jpg`,
+      href: "https://lazksport.netlify.app"
     },
   ];
   return (
