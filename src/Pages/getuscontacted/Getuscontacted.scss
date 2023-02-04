@@ -104,3 +104,25 @@
 	}
 }
  
+
+ 
+@media only screen and (max-width: 992px) {
+	.offcanvas_getuscontacted{
+		width: 60% !important;
+	   
+	}
+}
+@media only screen and (max-width: 768px) {
+	.offcanvas_getuscontacted{
+		width: 90% !important;
+	   
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.offcanvas_getuscontacted{
+		width: 100% !important;
+	   
+	}
+}
+

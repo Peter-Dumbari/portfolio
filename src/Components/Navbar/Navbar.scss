@@ -9,10 +9,17 @@ nav{
 
     .nav-item{
         margin: 0 10px 0 10px !important;
+        transition: 0.1s;
+
        
         .nav-link{
             color:  rgb(194, 200, 207) ;
         }
+    }
+
+    .nav-item:hover{
+      transform: scale(1.1);
+      transition: 0.1s;
     }
 }
 

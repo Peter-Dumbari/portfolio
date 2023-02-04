@@ -12,7 +12,7 @@ export default function Emptyproject() {
     <div className="container empty_container">
       <img src={Emptyimage} alt="empty image" />
       <h3>No Project or Check internet connection!!</h3>
-      <button className="btn btn-primary"  onClick={ refreshPage }> Reload</button>
+      <Button title="Reload Page" styLe="blue" handleSubmit={refreshPage}/>
     </div>
   );
 }
