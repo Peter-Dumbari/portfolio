@@ -30,7 +30,7 @@ export default function Footer() {
             <Link className="footerlinks">Accessibility</Link>
             <Link className="footerlinks">Desktop App</Link>
             <Link className="footerlinks">Cookies Policy</Link>
-            <Link className="footerlinks">Enterprise Solutiona</Link>
+            <Link className="footerlinks">Enterprise Solutions</Link>
           </div>
         </div>
         <div className="social_media_container">
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr style={{marginLeft: "5rem", marginRight: "5rem", textAlign: "center"}}></hr>
+        <hr style={{marginLeft: "5rem", textAlign: "center"}}></hr>
         <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
           <span className="bottom_text">
             © 2022-{currentYear} peterdumbari Global inc
