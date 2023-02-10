@@ -30,3 +30,27 @@
     top: 80%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .project_sample {
+    position: relative;
+  
+    .projection_header {
+      padding: 3rem;
+      text-align: center;
+      height: 40vh;
+  
+  
+      h1 {
+        color: #131313;
+        letter-spacing: 0.15em;
+        font-size: larger;
+      }
+    }
+  
+    .projects {
+      position: absolute;
+      left: 0;
+      top: 80%;
+    }
+  }
+}

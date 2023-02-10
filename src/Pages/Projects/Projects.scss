@@ -44,10 +44,57 @@
 
 }
 
+@media only screen and (max-width:  768px){
+  
+}
 @media only screen and (max-width: 600px) {
   .project_container{
-    margin-top: 1rem;
-  }
+    padding: 2rem !important;
+    margin-top: 4rem;
+    text-align: center;
+    
+
+    .project_header{
+        font-family: 'RubikMonoOne-Regular';
+        text-align: center;
+    }
+
+    .project_sample_container{
+      margin-bottom: 3rem;
+
+      .projectcolumn{
+        margin-bottom: 2rem !important;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.091);
+        position: relative;
+        
+        .miniBtn_holder{
+          position: absolute; 
+          top: 80%;
+          right: 10%; 
+          display: none;
+        }
+      }
+
+      .projectcolumn:hover .miniBtn_holder {
+        display: block;
+      }
+
+    }
+
+    
 }
+
+.cardlike{
+
+  img{
+    max-width: 100%;
+    
+  }
+
+}
+}
+
+
  
 

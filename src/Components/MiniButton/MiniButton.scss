@@ -22,4 +22,89 @@
     transition: 0.5s; 
     background-color: rgb(230, 227, 227);
   }
+
+
+  @media only screen and (max-width: 992px){
+    .link_arrow{
+      display: flex;
+      padding: 15px;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(90deg, #0a0737 0%, #1717a7 35%, #00d4ff 100%);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-align: center;
   
+      .fa-arrow-down{
+        transform: rotate(240deg);
+        font-weight: bolder;
+        color: white;
+      }
+    }
+  
+    .link_arrow:hover{
+      width: 55px;
+      height: 55px;
+      transition: 0.5s; 
+      background-color: rgb(230, 227, 227);
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .link_arrow{
+      display: flex;
+      padding: 12px;
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(90deg, #0a0737 0%, #1717a7 35%, #00d4ff 100%);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-align: center;
+  
+      .fa-arrow-down{
+        transform: rotate(240deg);
+        font-weight: bold;
+        color: white;
+      }
+    }
+  
+    .link_arrow:hover{
+      width: 45px;
+      height: 45px;
+      transition: 0.5s; 
+      background-color: rgb(230, 227, 227);
+    }
+  }
+  
+  @media only screen and (max-width: 600px){
+    .link_arrow{
+      display: flex;
+      padding: 10px;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      background: linear-gradient(90deg, #0a0737 0%, #1717a7 35%, #00d4ff 100%);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-align: center;
+  
+      .fa-arrow-down{
+        transform: rotate(240deg);
+        font-weight: bold;
+        color: white;
+        font-size: small;
+      }
+    }
+  
+    .link_arrow:hover{
+      width: 40px;
+      height: 40px;
+      transition: 0.5s; 
+      background-color: rgb(230, 227, 227);
+    }
+  }

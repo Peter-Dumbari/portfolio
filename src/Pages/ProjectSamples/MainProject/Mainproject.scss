@@ -29,3 +29,25 @@
     color: #131313;
 
 }
+
+@media only screen and (max-width:  768px){
+  
+}
+@media only screen and (max-width: 600px) {
+    .project_card{
+        margin-bottom: 2rem;
+        width: 100% !important;
+    
+        img{
+            border: none !important;
+        }
+        .card-body{
+            border: none !important;
+    
+            .projecttool{
+                font-weight: bold;
+                color: #131313;
+            }
+        }
+    }
+}

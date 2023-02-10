@@ -50,7 +50,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr style={{marginLeft: "5rem", textAlign: "center"}}></hr>
+        <div className="line">
+        <hr></hr>
+        </div>
         <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
           <span className="bottom_text">
             © 2022-{currentYear} peterdumbari Global inc

@@ -40,26 +40,31 @@ position: relative;
 }
 }
 
-
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 992px) {
+    .aboutme_container{
+        position: relative !important;
+        width: 100% !important;
+        
+    }
     .description_box{
-        padding: 2rem;
-    
+        padding: 1.5rem !important;
+        margin: 1rem 1rem 0 0 !important;
+        width: 95% !important;
+        border-radius: 3px;
+
         h1{
-            font-size: 1rem;
+            font-size: 2rem !important; 
             font-weight: bolder;
         }
     
         p{
-            font-size: 1rem;
+            font-size: 1.2rem !important;
         }
     }
     
     .image_box{
-        position:static;
+        position:relative !important;
         top: 0;
-        right: 10%;
         padding: 3rem;
         text-align: center;
     
@@ -67,18 +72,123 @@ position: relative;
             width: 300px;
             height: auto;
             border-radius: 10px;
-            -ms-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -webkit-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: scale(0);
+            -ms-transform: none !important;
+            -moz-transform: none !important;
+            -webkit-transform: none !important;
+            -o-transform: none !important;
+            transform: none !important;
 
         }
     
         img:hover{
-            transform: scale(0);
-            transition: 0;
+            transform: none !important;
+            transition: none !important;
             
         }
     }
+
 }
+
+@media only screen and (max-width: 768px) {
+    .aboutme_container{
+        position: relative !important;
+        width: 100% !important;
+        
+    }
+    .description_box{
+        padding: 1.5rem !important;
+        width: 95% !important;
+
+        h1{
+            font-size: 2.5rem !important; 
+            font-weight: bolder;
+        }
+    
+        p{
+            font-size: 1.1rem !important;
+        }
+    }
+    
+    .image_box{
+        position:relative !important;
+        top: 0;
+        padding: 3rem;
+        text-align: center;
+    
+        img{
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            -ms-transform: none !important;
+            -moz-transform: none !important;
+            -webkit-transform: none !important;
+            -o-transform: none !important;
+            transform: none !important;
+
+        }
+    
+        img:hover{
+            transform: none !important;
+            transition: none !important;
+            
+        }
+    }
+
+    .animate__lightSpeedInRight{
+        --animate-duration: 4s;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .aboutme_container{
+        position: relative !important;
+        width: 100% !important;
+        
+    }
+    .description_box{
+        padding: 1.5rem !important;
+        margin: 1rem 1rem 0 1rem !important;
+        width: 95% !important;
+
+        h1{
+            font-size: 2rem !important; 
+            font-weight: bolder;
+        }
+    
+        p{
+            font-size: 1rem !important;
+        }
+    }
+    
+    .image_box{
+        position:relative !important;
+        top: 0;
+        padding: 3rem;
+        text-align: center;
+    
+        img{
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            -ms-transform: none !important;
+            -moz-transform: none !important;
+            -webkit-transform: none !important;
+            -o-transform: none !important;
+            transform: none !important;
+
+        }
+    
+        img:hover{
+            transform: none !important;
+            transition: none !important;
+            
+        }
+    }
+
+    .animate__lightSpeedInRight{
+        --animate-duration: 4s;
+    }
+}
+
