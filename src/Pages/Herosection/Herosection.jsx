@@ -12,13 +12,9 @@ export default function Herosection() {
         <div className="row hero_container_row1">
             <div className="col-12 col-md-6">
                 <h6 className="first_text">
-                    WEBFLOW DEVELOPMENT
+                SHARP DELIVERY OF A
                 </h6>
-
-                <h2 className="second_text">
-                    We build Profitable <br/>
-                    Webflow Websites.
-                </h2>
+                <h6 className="second_text">Professional & Responsive Websites.</h6>
 
                 <h5 className="third_text">
                 Leveraging Webflow to craft optimized, responsive and  <br/> profitable websites. In days.
