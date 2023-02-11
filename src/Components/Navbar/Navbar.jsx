@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 import SearchContainer from "../SearchContainer/SearchContainer";
 import { NavLink } from "react-router-dom";
 import { Waypoint } from "react-waypoint";
+import grid from "../../Images/gridicon.png"
+import close from "../../Images/closeicon.png"
 
 function Navbar() {
   const [webFlow, setWebFlow] = useState("");
+  const [isOpen, setIsOpen] = useState(true);
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
@@ -51,13 +54,18 @@ function Navbar() {
               </div>
             )}
             <div
-            className="navbar-toggler"
+              onClick={() => setIsOpen(!isOpen)}
+              className="navbar-toggler"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation">
-                 <i className="fa-solid fa-bars"></i>
+              <img
+                  src={grid}
+                  alt="close"
+                  className="iconImage"
+                />
             </div>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">

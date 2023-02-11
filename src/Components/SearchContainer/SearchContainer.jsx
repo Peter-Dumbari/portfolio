@@ -4,7 +4,7 @@ import "../SearchContainer/SearchContainer.scss";
 export default function SearchContainer() {
   return (
     <div
-      className="modal fade"
+      className="modal fade searchModalbackground"
       id="searchContainer"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"

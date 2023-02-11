@@ -6,3 +6,38 @@
         width: 60%;
     }
 }
+
+
+@media only screen and (max-width: 992px) {
+    .blank_page{
+        justify-content: center;
+        text-align: center;
+    
+        .blank_page_image{
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blank_page{
+        justify-content: center;
+        text-align: center;
+    
+        .blank_page_image{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blank_page{
+        justify-content: center;
+        text-align: center;
+    
+        .blank_page_image{
+            width: 100%;
+        }
+    }
+
+}
