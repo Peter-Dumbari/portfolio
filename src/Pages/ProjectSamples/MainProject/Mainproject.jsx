@@ -3,17 +3,13 @@ import Emptyproject from "../Emptyproject/Emptyproject";
 import "../MainProject/Mainproject.scss";
 import Loader from "../../../Components/Loader/Loader";
 
-export default function Mainproject({ projects, loading }) {
+export default function Mainproject({ projects, loading,eror }) {
   return (
     <div className="row">
-      <div id="follower">
-        <div id="circle1"></div>
-        <div id="circle2"></div>
-      </div>
       {loading ? (
         <Loader />
       ) : projects.length === 0 ? (
-        <Emptyproject />
+        <Emptyproject message={eror}/>
       ) : (
         projects.map((project) => (
           <div className="col-md-4" key={project.id}>

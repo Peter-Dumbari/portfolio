@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [projects, setProjects] = useState([]);
+  const [eror, setErr] = useState("");
 
   const About = lazy(() => import(Projectsamples));
 
@@ -27,7 +28,15 @@ function App() {
         projectDatas.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
       );
     };
-    getProjects();
+    getProjects()
+      .then((res) => {
+        console.log("res", res);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+        setErr(err);
+      });
   }, [projects]);
 
   return (
@@ -38,7 +47,13 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route
           path="/projectsample"
-          element={<Projectsamples projects={projects} loading={isLoading} />}
+          element={
+            <Projectsamples
+              projects={projects}
+              loading={isLoading}
+              eror={eror}
+            />
+          }
         />
         <Route path="/teams" element={<Teams />} />
         <Route path="/upload" element={<Myform />} />

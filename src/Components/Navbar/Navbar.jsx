@@ -9,7 +9,6 @@ import { Waypoint } from "react-waypoint";
 
 function Navbar() {
   const [webFlow, setWebFlow] = useState("");
-  const [isOpen, setIsOpen] = useState(true)
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
@@ -42,7 +41,7 @@ function Navbar() {
             <img src={logo} alt="" />
           </Link>
           <div className="d-flex menu-div">
-            {width < 600 && (
+            {width < 990 && (
               <div
                 data-bs-toggle="modal"
                 aria-label="Toggle navigation"
@@ -52,14 +51,13 @@ function Navbar() {
               </div>
             )}
             <div
-            onClick={()=>{setIsOpen(!isOpen)}}
             className="navbar-toggler"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation">
-                 <i className={`fa-solid ${ isOpen? "fa-bars": "fa-times"} bars`} ></i>
+                 <i className="fa-solid fa-bars"></i>
             </div>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
