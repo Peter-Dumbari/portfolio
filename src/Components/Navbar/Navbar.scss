@@ -44,16 +44,42 @@ nav {
 
   .nav-item {
     margin: 0 10px 0 10px !important;
-    transition: 0.1s;
+    transition: color 0.3s linear, opacity 0.3s linear, 0.3s linear;
+    position: relative;
+
 
     .nav-link {
       color: rgb(194, 200, 207);
     }
   }
 
-  .nav-item:hover {
-    transform: scale(1.1);
-    transition: 0.1s;
+  // .nav-item:hover {
+  //   transform: scale(1.1);
+  //   transition: 0.1s;
+  // // }.link {
+  //   color: inherit;
+  //   display: inline-block;
+  //   vertical-align: top;
+  //   position: relative;
+  //   padding: 0 0 2px;
+  //   text-transform: none;
+  //   text-decoration: none;
+  //   transition: color 0.3s linear, opacity 0.3s linear, 0.3s linear;
+  // }
+  
+  .nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    left: 60%;
+    right: 60%;
+    background-image: linear-gradient(to right, #458ff6b6, #00a9b0);
+    transition: left .3s linear, right .3s linear;
+  }
+  .nav-item:hover:before {
+    left: 0;
+    right: 0;
   }
 
   .navSearchContainer {
@@ -114,7 +140,7 @@ nav {
 
 .navbar {
   transition: 0.5s;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color:hsl(0, 0%, 96%);
   z-index: 6;
 }
 
@@ -131,7 +157,6 @@ nav {
 
 .active {
   color: #458ff6b6 !important;
-  border-bottom: solid 1px;
   font-weight: bold;
   transition: 0.5ms;
 }

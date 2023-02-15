@@ -13,5 +13,21 @@
     url("./Fonts/RubikMonoOne-Regular.ttf") format("TrueType");
 }
 
+@font-face {
+  font-family: JuliusSansOne-Regular;
+  src: local("JuliusSansOne-Regular.ttf"),
+    url("./Fonts/JuliusSansOne-Regular.ttf") format("TrueType");
+}
+@font-face {
+  font-family: Cinzel-Regular;
+  src: local("Cinzel-Regular.ttf"),
+    url("./Fonts/Cinzel-Regular.ttf") format("TrueType");
+}
+@font-face {
+  font-family: Enriqueta-Regular;
+  src: local("Enriqueta-Regular.ttf"),
+    url("./Fonts/Enriqueta-Regular.ttf") format("TrueType");
+}
+
 
 

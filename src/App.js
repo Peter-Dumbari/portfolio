@@ -35,7 +35,7 @@ function App() {
       .catch((err) => {
         console.log(err);
         setIsLoading(false);
-        setErr(err);
+        setErr("Something went wrong");
       });
   }, [projects]);
 

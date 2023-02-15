@@ -11,10 +11,11 @@ export default function Emptyproject({message}) {
       }
 
 
+
   return (
     <div className="container empty_container">
       <img src={Emptyimage} alt="empty image" />
-      <h3>No Project or Check internet connection!!</h3>
+      <h3>{message&&message || "No Project or Check internet connection!!"}</h3>
       <Button title="Reload Page" styLe="blue" handleSubmit={refreshPage}/>
     </div>
   );

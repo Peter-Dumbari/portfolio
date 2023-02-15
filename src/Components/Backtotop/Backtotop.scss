@@ -1,4 +1,28 @@
-.back-to-up-default-text{
+
+
+.back-to-up-default{
     color: #fff !important;
     font-weight: bolder;
+    border-radius: 50% !important;
+    border: #4590f6 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s !important;
+    background-color: #fff !important;
+}
+
+.back-to-up-default:hover{
+    background-color: #fff !important;
+    color: #4590f6 !important;
+    transition: 0.5s !important;
+
+}
+
+.arrow{
+    width: 60%;
+    height: 60%;
+    rotate: 270deg;
+    background-color: #fff;
+
 }
