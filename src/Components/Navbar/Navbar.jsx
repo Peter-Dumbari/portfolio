@@ -77,7 +77,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink to="/projectsample" className={`nav-link`}>
-                  Project Samples
+                  Projects
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -87,7 +87,7 @@ function Navbar() {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              {width < 600 ? null : (
+              {width < 990 ? null : (
                 <div
                   className="navSearchContainer"
                   data-bs-toggle="modal"

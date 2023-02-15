@@ -1,6 +1,7 @@
 import React from 'react';
 import "../ProjectSamples/Projectsamples.scss";
 import Mainproject from './MainProject/Mainproject';
+import Footer from "../../Components/Footer/Footer"
 
 export default function Projectsamples({projects,loading,eror}) {
   return (
@@ -12,6 +13,9 @@ export default function Projectsamples({projects,loading,eror}) {
       <div className="container projects">
         <Mainproject projects={projects} loading={loading} eror={eror}/>
       </div>
+      {projects.length > 0 &&
+      <Footer/>
+      }
     </div>
   )
 }

@@ -14,8 +14,8 @@ export default function Projects() {
   const mappedProject = [
     {
       id: 0,
-      projectPic: `${Logo}`,
-      href: "https:tamstechnology.netlify.app"
+      projectPic: `https://res.cloudinary.com/tamstech-computer-repair-center/image/upload/v1676468249/Screen_Shot_2023-02-15_at_2.36.06_PM_jcmmtr.png`,
+      href: "https://lworldweather.netlify.app/"
     
     },
     {
