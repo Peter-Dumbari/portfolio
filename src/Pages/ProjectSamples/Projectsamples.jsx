@@ -13,9 +13,6 @@ export default function Projectsamples({projects,loading,eror}) {
       <div className="container projects">
         <Mainproject projects={projects} loading={loading} eror={eror}/>
       </div>
-      {projects.length > 0 &&
-      <Footer/>
-      }
     </div>
   )
 }
