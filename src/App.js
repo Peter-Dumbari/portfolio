@@ -19,10 +19,7 @@ function App() {
   const CurriculumVitae = lazy(
     () =>
       new Promise((resolve) =>
-        setTimeout(
-          () => resolve(import("./Pages/Teams/Teams")),
-          1000 // Set timeout in milliseconds
-        )
+        setTimeout(() => resolve(import("./Pages/Teams/Teams")))
       )
   );
   const ProjectComponent = lazy(
