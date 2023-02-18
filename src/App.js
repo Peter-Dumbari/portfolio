@@ -16,19 +16,9 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [eror, setErr] = useState("");
 
-  const CurriculumVitae = lazy(
-    () =>
-      new Promise((resolve) =>
-        setTimeout(() => resolve(import("./Pages/Teams/Teams")))
-      )
-  );
+  const CurriculumVitae = lazy(import("./Pages/Teams/Teams"));
   const ProjectComponent = lazy(
-    () =>
-      new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(import("./Pages/ProjectSamples/Projectsamples"));
-        });
-      })
+    import("./Pages/ProjectSamples/Projectsamples")
   );
   const projectCollectionRef = collection(db, "Projects");
   const [isLoading, setIsLoading] = useState(true);
