@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import Home from "./Pages/Home/Home";
-import Projectsamples from "./Pages/ProjectSamples/Projectsamples";
-import Teams from "./Pages/Teams/Teams";
+// import Projectsamples from "./Pages/ProjectSamples/Projectsamples";
+// import Teams from "./Pages/Teams/Teams";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "animate.css";
@@ -11,12 +11,28 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "./Firebase_configuration";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "./Components/Loader/Loader";
 function App() {
   const [projects, setProjects] = useState([]);
   const [eror, setErr] = useState("");
 
-  const About = lazy(() => import(Projectsamples));
-
+  const CurriculumVitae = lazy(
+    () =>
+      new Promise((resolve) =>
+        setTimeout(
+          () => resolve(import("./Pages/Teams/Teams")),
+          1000 // Set timeout in milliseconds
+        )
+      )
+  );
+  const ProjectComponent = lazy(
+    () =>
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(import("./Pages/ProjectSamples/Projectsamples"));
+        });
+      })
+  );
   const projectCollectionRef = collection(db, "Projects");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -48,14 +64,23 @@ function App() {
         <Route
           path="/projectsample"
           element={
-            <Projectsamples
-              projects={projects}
-              loading={isLoading}
-              eror={eror}
-            />
+            <Suspense fallback={<Loader />}>
+              <ProjectComponent
+                projects={projects}
+                loading={isLoading}
+                eror={eror}
+              />
+            </Suspense>
           }
         />
-        <Route path="/teams" element={<Teams />} />
+        <Route
+          path="/teams"
+          element={
+            <Suspense fallback={<Loader />}>
+              <CurriculumVitae />
+            </Suspense>
+          }
+        />
         <Route path="/upload" element={<Myform />} />
       </Routes>
     </Router>
