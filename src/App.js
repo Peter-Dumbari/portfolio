@@ -16,8 +16,9 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [eror, setErr] = useState("");
 
-  const CurriculumVitae = lazy(import("./Pages/Teams/Teams"));
-  const ProjectComponent = lazy(
+  const CurriculumVitae = lazy(() => import("./Pages/Teams/Teams"));
+
+  const ProjectComponent = lazy(() =>
     import("./Pages/ProjectSamples/Projectsamples")
   );
   const projectCollectionRef = collection(db, "Projects");
