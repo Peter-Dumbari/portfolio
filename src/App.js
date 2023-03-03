@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import Home from "./Pages/Home/Home";
-// import Projectsamples from "./Pages/ProjectSamples/Projectsamples";
-// import Teams from "./Pages/Teams/Teams";
+import Projectsamples from "./Pages/ProjectSamples/Projectsamples";
+import Teams from "./Pages/Teams/Teams";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "animate.css";
@@ -12,11 +12,10 @@ import { db } from "./Firebase_configuration";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "./Components/Loader/Loader";
+
 function App() {
   const [projects, setProjects] = useState([]);
   const [eror, setErr] = useState("");
-
-  const CurriculumVitae = lazy(() => import("./Pages/Teams/Teams"));
 
   const ProjectComponent = lazy(() =>
     import("./Pages/ProjectSamples/Projectsamples")
@@ -52,23 +51,14 @@ function App() {
         <Route
           path="/projectsample"
           element={
-            <Suspense fallback={<Loader />}>
-              <ProjectComponent
-                projects={projects}
-                loading={isLoading}
-                eror={eror}
-              />
-            </Suspense>
+            <Projectsamples
+              projects={projects}
+              loading={isLoading}
+              eror={eror}
+            />
           }
         />
-        <Route
-          path="/teams"
-          element={
-            <Suspense fallback={<Loader />}>
-              <CurriculumVitae />
-            </Suspense>
-          }
-        />
+        <Route path="/teams" element={<Teams />} />
         <Route path="/upload" element={<Myform />} />
       </Routes>
     </Router>
