@@ -6,6 +6,8 @@ import Buttons from "../../Components/Buttons/Button";
 import { Link } from "react-router-dom";
 import { Waypoint } from "react-waypoint";
 import MiniButton from "../../Components/MiniButton/MiniButton";
+import img1 from "../../Images/screenshort.jpg";
+import img2 from "../../Images/lazksport.jpg";
 
 export default function Projects() {
   const [classname, setClassname] = useState("");
@@ -14,20 +16,18 @@ export default function Projects() {
   const mappedProject = [
     {
       id: 0,
-      projectPic: `https://res.cloudinary.com/tamstech-computer-repair-center/image/upload/v1676468249/Screen_Shot_2023-02-15_at_2.36.06_PM_jcmmtr.png`,
-      href: "https://lworldweather.netlify.app/"
-    
+      projectPic: img1,
+      href: "https://lworldweather.netlify.app/",
     },
     {
       id: 1,
-      projectPic: `https://res.cloudinary.com/tamstech-computer-repair-center/image/upload/v1670431740/Portfolio/lazksport_bvkbbs.jpg`,
-      href: "https://lazksport.netlify.app"
+      projectPic: img2,
+      href: "https://lazksport.netlify.app",
     },
   ];
   return (
     <div className="container-fluid project_container">
-      <div className={`row project_sample_container`}>      
-        
+      <div className={`row project_sample_container`}>
         {mappedProject.map((items) => (
           <div className="row " key={items.id}>
             <div className="row " key={items.id}>
@@ -36,7 +36,7 @@ export default function Projects() {
                   <img src={items.projectPic} alt="Avatar" />
                 </div>
                 <div className="miniBtn_holder">
-                <MiniButton link={items.href}/>
+                  <MiniButton link={items.href} />
                 </div>
               </div>
             </div>
